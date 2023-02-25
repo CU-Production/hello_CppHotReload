@@ -12,9 +12,6 @@
 
 int main()
 {
-    std::cout << "Hello world!" << std::endl;
-    std::cout << HELLO_HSCPP_ROOT_PATH << std::endl;
-
     hscpp::Hotswapper swapper;
 
     auto srcPath = HELLO_HSCPP_ROOT_PATH"/simple_hotsawp";
