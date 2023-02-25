@@ -24,14 +24,13 @@ add_library(imgui STATIC
         simple_imgui/imgui/imgui_tables.cpp
         simple_imgui/imgui/imgui_widgets.cpp)
 
-set(SOKOL_HEADERS
+add_library(sokol STATIC
+        simple_imgui/sokol.cpp
         simple_imgui/sokol/sokol_gfx.h
         simple_imgui/sokol/sokol_app.h
         simple_imgui/sokol/sokol_glue.h
         simple_imgui/sokol/sokol_log.h
         simple_imgui/sokol/util/sokol_imgui.h)
-
-add_library(sokol STATIC simple_imgui/sokol.cpp ${SOKOL_HEADERS})
 target_link_libraries(sokol PUBLIC imgui)
 
 add_executable(simple_imgui_sokol
