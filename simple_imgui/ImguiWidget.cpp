@@ -2,7 +2,7 @@
 // Created by Admin on 2023/2/25.
 //
 
-
+#include "sokol/sokol_app.h"
 #include "imgui/imgui.h"
 #include "ImguiWidget.h"
 #include "GlobalUserData.h"
@@ -45,10 +45,10 @@ void ImguiWidget::Frame()
     if (ImGui::Button("Test Window")) m_show_test_window ^= 1;
     if (ImGui::Button("Another Window")) m_show_another_window ^= 1;
     ImGui::Text("Application average %.3f ms/frame (%.1f FPS)", 1000.0f / ImGui::GetIO().Framerate, ImGui::GetIO().Framerate);
-//    ImGui::Text("w: %d, h: %d, dpi_scale: %.1f", sapp_width(), sapp_height(), sapp_dpi_scale());
-//    if (ImGui::Button(sapp_is_fullscreen() ? "Switch to windowed" : "Switch to fullscreen")) {
-//        sapp_toggle_fullscreen();
-//    }
+    ImGui::Text("w: %d, h: %d, dpi_scale: %.1f", sapp_width(), sapp_height(), sapp_dpi_scale());
+    if (ImGui::Button(sapp_is_fullscreen() ? "Switch to windowed" : "Switch to fullscreen")) {
+        sapp_toggle_fullscreen();
+    }
 
     // 2. Show another simple window, this time using an explicit Begin/End pair
     if (m_show_another_window) {
