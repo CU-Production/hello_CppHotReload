@@ -1,4 +1,7 @@
 # hello_CppHotReload
+
+![imgui HotReload demo](screenshots/ezgif.com-video-to-gif.gif)
+
 CppHotReload using [hscpp](https://github.com/jheruty/hscpp)
 
 # How to use hscpp
