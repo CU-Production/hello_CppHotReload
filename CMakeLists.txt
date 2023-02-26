@@ -3,8 +3,8 @@ project(hello_CppHotReload)
 
 set(CMAKE_CXX_STANDARD 17)
 
-set(HSCPP_BUILD_EXAMPLES OFF)
-set(HSCPP_BUILD_TESTS OFF)
+option(HSCPP_BUILD_EXAMPLES OFF)
+option(HSCPP_BUILD_TESTS OFF)
 add_subdirectory(3rdparty/hscpp)
 
 add_executable(simple_hotsawp
